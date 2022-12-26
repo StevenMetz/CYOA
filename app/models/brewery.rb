@@ -1,7 +1,7 @@
 class Brewery < ApplicationRecord
-  # def address
+  def address
+  end
 
-  # end
   geocoded_by :address
   after_validation :geocode
 end
