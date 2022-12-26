@@ -7,6 +7,12 @@ class BreweriesController < ApplicationController
   def show
   end
 
+  def location
+    results = Geocoder.search("1409 W Morrow Dr., Phoenix, AZ 85027")
+    results.first.coordinates
+    render json: results.as_json
+  end
+
   def create
   end
 
