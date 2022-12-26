@@ -1,0 +1,7 @@
+@breweries.map do |brewery|
+  {
+    id: brewery.id,
+    address: brewery.address,
+    website: brewery.website
+  }
+end
