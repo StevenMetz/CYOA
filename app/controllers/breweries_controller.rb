@@ -1,16 +1,21 @@
 class BreweriesController < ApplicationController
+
   def index
     @breweries = Brewery.all
-    render json: @breweries
+    render :index
   end
 
   def show
   end
 
   def location
-    results = Geocoder.search("1409 W Morrow Dr., Phoenix, AZ 85027")
-    results.first.coordinates
-    render json: results.as_json
+    
+    # results = Geocoder.search("PO Box 4653, Stockton, California, 95204")
+    # latitude = results.first.coordinates[0]
+    # longitude = results.first.coordinates[1]
+    
+
+    # render json: latitude.as_json
   end
 
   def create

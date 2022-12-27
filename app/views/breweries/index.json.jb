@@ -1,6 +1,7 @@
 @breweries.map do |brewery|
   {
     id: brewery.id,
+    name: brewery.brewery_name,
     address: brewery.address,
     website: brewery.website
   }
